@@ -53,7 +53,15 @@ namespace Lifestream
                 endpoints.MapFallbackToPage("/_Host");
             });
 
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+            var options = new ElectronNET.API.Entities.BrowserWindowOptions()
+            {
+                Show = true,
+                Frame = false,
+                Center = true,
+
+            };
+            
+            Task.Run(async () => Globals.GetInstance().MainWindow = await Electron.WindowManager.CreateWindowAsync(options));
         }
     }
 }
