@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-@namespace Lifestream.Data
 
 <div class="title-bar" id="application-title-bar">
     <div class="controls">
@@ -15,16 +14,12 @@
     </div>
 
     <div class="main">
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
         <div class="content px-4">
             @Body
         </div>
     </div>
 </div>
-
+@using Lifestream.Data;
 @code{
     private void minbtnClick()
     {

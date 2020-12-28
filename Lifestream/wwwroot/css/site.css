@@ -17,7 +17,7 @@ a, .btn-link {
     top: 20px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 20px;
 }
 
 #application-title-bar {
@@ -51,6 +51,10 @@ app {
 
 .main {
     flex: 1;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 250px;
 }
 
     .main .top-row {
